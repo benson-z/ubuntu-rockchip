@@ -26,7 +26,7 @@ users:
 # On first boot, set the (default) ubuntu user's password to "ubuntu" and
 # expire user passwords
 chpasswd:
-  expire: true
+  expire: false
   users:
   - name: ubuntu
     password: ubuntu
@@ -79,7 +79,9 @@ ssh_pwauth: true
 #package_upgrade: true
 
 ## Install additional packages on first boot
-#packages:
+packages:
+- v4l-utils
+- neofetch
 #- avahi-daemon
 #- rng-tools
 #- python3-gpiozero
